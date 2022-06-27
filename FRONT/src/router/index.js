@@ -45,11 +45,19 @@ const routes = [
     path: '/post/:id',
     name: 'Post',
     component: PostView,
+    meta: {
+      middleware: [auth],
+      meta: { title: 'Post' }
+    },
   },
   {
     path: '/edit/:id',
     name: 'Edit',
     component: EditView,
+    meta: {
+      middleware: [auth],
+      meta: { title: 'Edit' }
+    },
   }
 ]
 
